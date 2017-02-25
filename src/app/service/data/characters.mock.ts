@@ -234,7 +234,7 @@ export default[
             "items": [
               {
                 "resourceURI": "http://gateway.marvel.com/v1/public/stories/105929",
-                "name": "cover from Free ComicModel Book Day 2013 (Avengers/Hulk) (2013) #1",
+                "name": "cover from Free ComicsModel Book Day 2013 (Avengers/Hulk) (2013) #1",
                 "type": "cover"
               }
             ],

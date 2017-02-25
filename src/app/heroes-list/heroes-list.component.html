@@ -1,20 +1,43 @@
-<p>
-  heroes-list works!
-</p>
 
 
-<table>
-  <thead>
-    <th>Name</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let hero of heroList">
-      <td>
-        {{ hero.name }}
-      </td>
-    </tr>
-  </tbody>
-</table>
+<!--List of heroes iterate from API-->
+<p-dataGrid [value]="heroList" [paginator]="true" [rows]="8" [paginator]="true">
+  <p-header>
+    List of Heroes
+  </p-header>
+
+  <template let-heroList
+            pTemplate="item"
+            class="pointer">
+
+    <div style="padding:3px"
+         class="ui-g-12 ui-md-3 pointer"
+         (click)="selectHero(heroList)">
+
+      <p-panel [header]="heroList.name"
+               [style]="{'text-align':'center'}"
+               class="pointer">
+
+        <div class="thumbnailWrapper pointer">
+          <img class="pointer"
+               src="{{ heroList.thumbnail.path }}.{{ heroList.thumbnail.extension }}"
+               alt="Thumbnail {{ heroList.name }}"/>
+        </div>
+
+        <div class="pointer">
+          {{heroList.name}}
+        </div>
+
+        <hr class="ui-widget-content "
+            style="border-top:0">
+      </p-panel>
+
+    </div>
+  </template>
+</p-dataGrid>
+
+
+
 
 
 

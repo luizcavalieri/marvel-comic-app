@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HeroService } from '../service/hero.service';
 import { HeroModel } from '../model/hero.model';
-import { LoggingService } from '../service/logging.service';
-import { Response } from '@angular/http';
+import { ComicsModel } from '../model/comics.model';
 
 @Component({
   selector: 'app-heroes-list',
   templateUrl: './heroes-list.component.html',
-  styleUrls: ['./heroes-list.component.css']
+  styleUrls: ['./heroes-list.component.scss']
 })
 export class HeroesListComponent implements OnInit {
 
 
   public heroList: Array<HeroModel>;
-  //public heroList: any;
 
+  @Output('hero')
+  heroSelectedEvent = new EventEmitter();
 
-  constructor(
-    public heroService: HeroService,
-    loggingService: LoggingService) {
+  heroSelected: HeroModel;
+
+  constructor(public heroService: HeroService) {
 
   }
 
@@ -28,6 +28,7 @@ export class HeroesListComponent implements OnInit {
 
   }
 
+  //getting data from the service hero.
   getHeroList(){
 
     const heroes$ = this.heroService.getHeroes();
@@ -38,8 +39,16 @@ export class HeroesListComponent implements OnInit {
 
   }
 
-  generateArray(obj){
-    return Object.keys(obj).map((key)=>{ return obj[key]});
+  // Method to get selected hero from datagrid
+  selectHero(hero: HeroModel){
+
+    this.heroSelected = hero;
+
+    this.heroSelectedEvent.emit(hero);
+
+    console.log(this.heroSelected);
+
   }
+
 
 }

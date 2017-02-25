@@ -1,0 +1,57 @@
+
+body {
+  background: #cacccf;
+
+}
+
+span.ui-cell-data {
+  height: 150px !important;
+  width: 350px !important;
+  display: block  !important;
+  word-wrap: normal !important;
+}
+
+.ui-datatable-resizable tbody td{
+  white-space: pre-wrap  !important;
+}
+
+.ui-tooltip{
+  max-width: 100px !important;
+  white-space: normal;
+  background-color: blue;
+}
+
+div .ui-widget .ui-tooltip .ui-tooltip-right .tooltipDescription{
+  max-width: 100px !important;
+  white-space: normal !important;
+  background-color: blue;
+}
+
+.mainImage{
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  background-image: url("../assets/img/marvel-46.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  float: left;
+}
+
+.paddingTop{
+  padding-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+}
+
+.card-effect {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

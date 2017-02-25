@@ -1,0 +1,33 @@
+
+
+// formating image from selected hero
+.imageDetail{
+  max-height: 500px;
+  max-width: 500px;
+  height: 100%;
+  width: 100%;
+}
+
+//styling the list from the stories
+.listStyling{
+  font-size: 16px;
+  line-height: 30px;
+  list-style-image: url('../../assets/img/ironman_III-20x20.png');
+}
+
+//card style
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  min-height: 500px;
+  height: auto;
+  margin: 1rem;
+  position: relative;
+  width: 98%;
+  padding: 40px;
+}
+
+.card-effect {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}

@@ -1,3 +1,57 @@
-<p>
-  hero-detail works!
-</p>
+
+<!--Check if hero object is null-->
+<div *ngIf="!hero"
+     class="card card-effect">
+
+  <h3>
+    Please choose your Superhero!
+  </h3>
+
+</div>
+
+<!--Check if hero object is null-->
+<div *ngIf="hero"
+     class="card card-effect">
+
+  <!--loading details from hero selected-->
+  <h1>
+    {{ hero.name }}
+  </h1>
+
+  <h4>
+    {{ hero.description }}
+  </h4>
+
+
+  <div class="row">
+
+
+    <div class="col-sm-6">
+      <img class="imageDetail"
+           src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}"
+           alt="Thumbnail {{ hero.name }}"/>
+    </div>
+
+    <div class="col-sm-6">
+      <h4> Stories Present </h4>
+
+      <!--listing stories from hero-->
+      <div *ngIf="hero.stories['available'] > 0">
+
+        <ul class="listStyling">
+          <li *ngFor="let comic of hero.stories['items']">
+            {{ comic['name'] }}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
