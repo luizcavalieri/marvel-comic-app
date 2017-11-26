@@ -27,11 +27,11 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <app-heroes-list #list (hero)="detail.hero = $event"></app-heroes-list>
+      <ng-app-heroes-list #list (hero)="detail.hero = $event"></ng-app-heroes-list>
     </div>
 
     <div class="col-sm-12">
-      <app-hero-detail #detail></app-hero-detail>
+      <ng-app-hero-detail #detail></ng-app-hero-detail>
       <!--<app-hero-detail ></app-hero-detail>-->
     </div>
 

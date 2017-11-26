@@ -1,10 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HeroService } from '../service/hero.service';
 import { HeroModel } from '../model/hero.model';
-import { ComicsModel } from '../model/comics.model';
 
 @Component({
-  selector: 'app-heroes-list',
+  selector: 'ng-app-heroes-list',
   templateUrl: './heroes-list.component.html',
   styleUrls: ['./heroes-list.component.scss']
 })
@@ -12,6 +11,8 @@ export class HeroesListComponent implements OnInit {
 
 
   public heroList: Array<HeroModel>;
+
+  // heroes$: Observable<HeroModel[]>;
 
   @Output('hero')
   heroSelectedEvent = new EventEmitter();
@@ -34,7 +35,8 @@ export class HeroesListComponent implements OnInit {
     const heroes$ = this.heroService.getHeroes();
 
     heroes$.subscribe(
-      heroes => this.heroList = heroes
+      heroes => this.heroList = heroes['data']['results'],
+      heroes => console.log(heroes['data']['results'])
     );
 
   }
@@ -49,6 +51,4 @@ export class HeroesListComponent implements OnInit {
     console.log(this.heroSelected);
 
   }
-
-
 }
