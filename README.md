@@ -36,3 +36,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Deploying to GitHub Pages
+
+Run `ng build --prod --base-href "https://luizcavalieri.github.io/marvel-comic-app/"` to build the bundle.
+Run `ngh` to commit the new bundle to the branch serving Gihub Pages.  
+The app will be served on "https://luizcavalieri.github.io/marvel-comic-app/".

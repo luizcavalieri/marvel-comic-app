@@ -1,18 +1,23 @@
 
+ng-app-hero-detail{
+
+  img{
+    width: 100%;
+  }
+
+  .ui-panel{
+    border: 0px solid;
+  }
+
+}
 
 // formating image from selected hero
-.imageDetail{
-  max-height: 500px;
-  max-width: 500px;
-  height: 100%;
-  width: 100%;
-}
 
 //styling the list from the stories
 .listStyling{
   font-size: 16px;
   line-height: 30px;
-  list-style-image: url('../../assets/img/ironman_III-20x20.png');
+  //list-style-image: url('/assets/img/ironman_III-20x20.png');
 }
 
 //card style

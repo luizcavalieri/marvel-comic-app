@@ -2,35 +2,10 @@
 <div class="container paddingTop">
   <div class="row">
     <div class="col-sm-6">
-      <div class="mainImage">
-      </div>
-    </div>
-
-    <div class="col-sm-6">
-      <h1>
-        Marvel Hero!
-      </h1>
-
-      <h4>
-        If you want to be the master of Marvel superheroes, you are in the right place!
-      </h4>
-
-      <p>
-        Click on the hero you want to know more about, and scroll down to check the details!
-      </p>
-
-      <h3>Have fun!</h3>
-
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-sm-12">
       <ng-app-heroes-list #list (hero)="detail.hero = $event"></ng-app-heroes-list>
     </div>
 
-    <div class="col-sm-12">
+    <div class="col-sm-6">
       <ng-app-hero-detail #detail></ng-app-hero-detail>
       <!--<app-hero-detail ></app-hero-detail>-->
     </div>

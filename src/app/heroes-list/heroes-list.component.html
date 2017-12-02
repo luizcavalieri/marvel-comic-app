@@ -1,17 +1,18 @@
 
 
 <!--List of heroes iterate from API-->
-<p-dataGrid [value]="heroList" [paginator]="true" [rows]="8" [paginator]="true">
+<p-dataGrid [value]="heroList" [paginator]="true" [rows]="6" [paginator]="true">
   <p-header>
-    List of Heroes
+    <h3>
+      List of Heroes
+    </h3>
   </p-header>
 
   <ng-template let-heroList
             pTemplate="item"
             class="pointer">
 
-    <div style="padding:3px"
-         class="ui-g-12 ui-md-3 pointer"
+    <div class="ui-g-12 ui-md-6 ui-lg-4 pointer"
          (click)="selectHero(heroList)">
 
       <p-panel [header]="heroList.name"

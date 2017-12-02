@@ -1,38 +1,62 @@
 
 <!--Check if hero object is null-->
-<div *ngIf="!hero"
-     class="card card-effect">
+<p-panel *ngIf="!hero">
+  <p-header>
+    <h3>
+      Please choose your Superhero!
+    </h3>
+  </p-header>
+    <div class="col-sm-12">
+        <img src="/assets/img/marvel-46.jpg" alt="Marvel Comic App">
+    </div>
 
-  <h3>
-    Please choose your Superhero!
-  </h3>
+    <div class="col-sm-12">
+      <h1>
+        Marvel Hero!
+      </h1>
 
-</div>
+      <h4>
+        If you want to be the master of Marvel superheroes, you are in the right place!
+      </h4>
+
+      <p>
+        Click on the hero you want to know more about, and scroll down to check the details!
+      </p>
+
+    </div>
+    <h3>
+      Have fun!
+    </h3>
+  <p-footer>
+
+  </p-footer>
+
+</p-panel>
 
 <!--Check if hero object is null-->
-<div *ngIf="hero"
-     class="card card-effect">
+<p-panel *ngIf="hero">
 
   <!--loading details from hero selected-->
-  <h1>
-    {{ hero.name }}
-  </h1>
+  <p-header>
+    <h3>
+      {{ hero.name }}
+    </h3>
+  </p-header>
 
-  <h4>
+  <p>
     {{ hero.description }}
-  </h4>
-
+  </p>
 
   <div class="row">
 
 
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <img class="imageDetail"
            src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}"
            alt="Thumbnail {{ hero.name }}"/>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <h4> Stories Present </h4>
 
       <!--listing stories from hero-->
@@ -48,7 +72,7 @@
 
     </div>
   </div>
-</div>
+</p-panel>
 
 
 

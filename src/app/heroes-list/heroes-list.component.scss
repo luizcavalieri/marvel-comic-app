@@ -51,3 +51,28 @@ span.ui-cell-data {
   display: block  !important;
   word-wrap: normal !important;
 }
+
+
+.ui-datagrid{
+
+  &-content{
+
+    .ui-panel{
+
+      &-titlebar{
+        height: 60px;
+
+      }
+
+      &-content-wrapper{
+
+        .pointer{
+          min-height: 40px;
+        }
+      }
+
+
+    }
+  }
+
+}
