@@ -91,8 +91,8 @@ var AppComponent = (function () {
  Export Constants
  */
 var MARVEL_API_URL = 'http://gateway.marvel.com:80/v1/public/';
-var PRIVATE_KEY = 'b1ffa2511e30bad2aabdd61afc248ae30d97fd6f';
-var PUBLIC_KEY = '135e48a7e09ef621e8806df1d2935ab0';
+var PRIVATE_KEY = '3a9788835969952aaf6684563f14f3f403ff5be7';
+var PUBLIC_KEY = '5697934f4dd8b26d2b4da6cb889ffced';
 var TS = '1';
 
 
